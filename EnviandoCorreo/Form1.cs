@@ -65,7 +65,7 @@ namespace EnviandoCorreo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SendEmail();
+            EnviarCorreo("roymartinez94@gmail.com","aniting","body de aniting");
 
         }
 
@@ -143,7 +143,39 @@ namespace EnviandoCorreo
             
         }
 
+        public static string EnviarCorreo(string destinatario, string asunto, string cuerpo,
+               List<AlternateView> vistas = null)
+        {
+            try
+            {
 
+                var m = new MailMessage(new MailAddress("pruebarmartinez@gmail.com", "pruebatda"),
+                    new MailAddress(destinatario))
+                {
+                    Subject = asunto,
+                    Body = cuerpo,
+                    IsBodyHtml = true
+                };
+                if (vistas != null)
+                {
+                    foreach (var item in vistas)
+                    {
+                        m.AlternateViews.Add(item);
+                    }
+                }
+                var smtp = new SmtpClient("smtp.gmail.com")
+                {
+                    Credentials = new NetworkCredential("pruebarmartinez@gmail.com", "pruebatda"),
+                    EnableSsl = false
+                };
+                smtp.Send(m);
+                return string.Empty;
+            }
+            catch (Exception exc)
+            {
+                return exc.Message;
+            }
+        }
 
     }
 }
