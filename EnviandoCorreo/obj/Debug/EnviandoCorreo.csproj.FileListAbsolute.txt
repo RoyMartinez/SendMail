@@ -1,0 +1,9 @@
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\bin\Debug\EnviandoCorreo.exe.config
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\bin\Debug\EnviandoCorreo.exe
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\bin\Debug\EnviandoCorreo.pdb
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.csprojResolveAssemblyReference.cache
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.Form1.resources
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.Properties.Resources.resources
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.csproj.GenerateResource.Cache
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.exe
+c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.pdb
