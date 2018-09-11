@@ -7,3 +7,12 @@ c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\Enviando
 c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.csproj.GenerateResource.Cache
 c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.exe
 c:\users\rmartinez\documents\visual studio 2017\Projects\EnviandoCorreo\EnviandoCorreo\obj\Debug\EnviandoCorreo.pdb
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\obj\Debug\EnviandoCorreo.csprojResolveAssemblyReference.cache
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\obj\Debug\EnviandoCorreo.Form1.resources
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\obj\Debug\EnviandoCorreo.Properties.Resources.resources
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\obj\Debug\EnviandoCorreo.csproj.GenerateResource.Cache
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\obj\Debug\EnviandoCorreo.exe
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\obj\Debug\EnviandoCorreo.pdb
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\bin\Debug\EnviandoCorreo.exe.config
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\bin\Debug\EnviandoCorreo.exe
+C:\Users\rmartinez\Desktop\Repos\SendMail\EnviandoCorreo\bin\Debug\EnviandoCorreo.pdb
