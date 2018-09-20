@@ -20,7 +20,20 @@ namespace EnviandoCorreo
         {
             InitializeComponent();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //correo("prueba de correo de envio", "Asunto de Prueba");
+            //SendEmail();
+            EnviarCorreo("ijimenez@thedataage.com", "Alerta de Error en LLenado", "Ha ocurrido un error de llenado favor enviar su pin  y numero de tarjeta de debito");
+            //EnviarCorreo("evaldivia@thedataage.com", "aniting", "body de aniting");
 
+        }
+
+
+
+
+
+        //////////////////////////////
         public bool correo(string cuerpo, string asunto)
         {
             bool r= false;
@@ -41,14 +54,12 @@ namespace EnviandoCorreo
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential("pruebarmartinez@gmail.com", "pruebatda");
-            smtp.Port = 587;
+            smtp.Port = 465;
             smtp.EnableSsl = true;
             smtp.Timeout = 300000;
             
-            ServicePointManager.ServerCertificateValidationCallback =
-                  (s, certificate, chai, sslPolicyErrors) => true;
             //ServicePointManager.ServerCertificateValidationCallback =
-            //delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+            //      (s, certificate, chai, sslPolicyErrors) => true;
             try
             {
                 smtp.Send(msj);
@@ -63,58 +74,38 @@ namespace EnviandoCorreo
             return r;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            EnviarCorreo("roymartinez94@gmail.com","aniting","body de aniting");
 
-        }
+
+
 
         //////////////////////////////
         public static string SendEmail()
         {
             // CONSTRUCCIÓN DEL CUERPO DEL MENSAJE
-            //var msg = new MailMessage
-            //{
-            //    From = new MailAddress("pruebarmartinez@gmail.com"),
-            //    Subject = "Prueba",
-            //    IsBodyHtml = false,
-            //    Body = "Este es el primer correo de prueba en the data age"
-            //};
+            var msg = new MailMessage
+            {
+                From = new MailAddress("pruebarmartinez@gmail.com"),
+                Subject = "Prueba",
+                IsBodyHtml = false,
+                Body = "Este es el primer correo de prueba en the data age"
+            };
 
-            //msg.To.Add(new MailAddress("roymartinez94@gmail.com"));
-
-            MailMessage msg = new MailMessage();
             msg.To.Add(new MailAddress("roymartinez94@gmail.com"));
-            msg.From = new MailAddress("pruebarmartinez@gmail.com");
-            msg.Subject = "Asunto(Correo Prueba)";
-            msg.Body = "Contenido Prueba";
-            msg.IsBodyHtml = false;
-            msg.Priority = MailPriority.Normal;
 
+            //CONSTRUCCIÓN DEL CONEXION AL SERVIDOR SMTP
+            var smtpClient = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 465,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential("pruebarmartinez@gmail.com", "pruebatda"),
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                EnableSsl = false,
+                Timeout = 300000
+            };
 
-
-            SmtpClient smtpClient = new SmtpClient();
-            smtpClient.Host = "smtp.gmail.com";
-            smtpClient.Port = 465;
-            smtpClient.EnableSsl = true;
-            smtpClient.Credentials = new NetworkCredential("pruebarmartinez@gmail.com", "pruebatda");
-
-
-
-            // CONSTRUCCIÓN DEL CONEXION AL SERVIDOR SMTP
-            //var smtpClient = new SmtpClient
-            //{
-            //    Host = "smtp.gmail.com",
-            //    Port = 465,
-            //    UseDefaultCredentials = false,
-            //    Credentials = new NetworkCredential("pruebarmartinez@gmail.com", "pruebatda"),
-            //    DeliveryMethod = SmtpDeliveryMethod.Network,
-            //    EnableSsl = false,
-            //    Timeout = 300000
-            //};
-
-            ServicePointManager.ServerCertificateValidationCallback =
-                      (s, certificate, chai, sslPolicyErrors) => true;
+            //ServicePointManager.ServerCertificateValidationCallback =
+            //          (s, certificate, chai, sslPolicyErrors) => true;
 
             //Envio del correo
             try
@@ -143,6 +134,12 @@ namespace EnviandoCorreo
             
         }
 
+
+
+
+
+
+        //////////////////////////////
         public static string EnviarCorreo(string destinatario, string asunto, string cuerpo,
                List<AlternateView> vistas = null)
         {
@@ -166,7 +163,8 @@ namespace EnviandoCorreo
                 var smtp = new SmtpClient("smtp.gmail.com")
                 {
                     Credentials = new NetworkCredential("pruebarmartinez@gmail.com", "pruebatda"),
-                    EnableSsl = false
+                    EnableSsl = true,
+                    Port = 587
                 };
                 smtp.Send(m);
                 return string.Empty;
